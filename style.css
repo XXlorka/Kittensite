@@ -451,6 +451,33 @@ nav a {
         font-size: 20px;
     }
 }
+/* ===== КОНТАКТЫ ===== */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+    .contact h1 {
+        font-size: 34px;
+        margin-bottom: 30px;
+        color: var(--vert-fonce);
+    }
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+}
+
+    .contact-info a {
+        color: var(--vert-fonce);
+        transition: color 0.3s;
+    }
+
+        .contact-info a:hover {
+            color: var(--brun);
+        }
 
 /* ===== ПОДВАЛ ===== */
 footer {
