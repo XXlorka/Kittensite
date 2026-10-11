@@ -1,0 +1,430 @@
+﻿/* ===== ПЕРЕМЕННЫЕ ЦВЕТОВ ===== */
+:root {
+    --vert-sauge: #7f9f8e;
+    --vert-fonce: #5a7a6a;
+    --beige: #cac8ab;
+    --olive: #7D834B;
+    --creme: #F0FFF0;
+    --brun: #bf8a6c;
+    --texte: #2c3e50;
+    --gris-clair: #f9f9f9;
+}
+
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.7;
+    color: var(--texte);
+    background-color: var(--gris-clair);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== ШАПКА ===== */
+header {
+    background-color: var(--vert-sauge);
+    color: #fff;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    max-width: 60%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+    nav a:hover {
+        color: var(--beige);
+    }
+
+/* ===== ГЛАВНЫЙ ЭКРАН (HERO) ===== */
+.hero {
+    background: linear-gradient(135deg, var(--beige), var(--vert-sauge));
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+    .hero h1 {
+        font-size: 52px;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin-bottom: 35px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/* ===== КНОПКА ===== */
+.btn {
+    display: inline-block;
+    background-color: var(--olive);
+    color: #fff;
+    padding: 14px 34px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+    .btn:hover {
+        background-color: var(--brun);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+/* ===== О НАС ===== */
+.description {
+    background: var(--creme);
+    padding: 70px 20px;
+}
+
+    .description .inner {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .description h1 {
+        text-align: center;
+        font-size: 34px;
+        margin-bottom: 30px;
+        color: var(--vert-fonce);
+    }
+
+    .description h2 {
+        font-size: 26px;
+        margin: 40px 0 20px;
+        color: var(--vert-fonce);
+        text-align: center;
+    }
+
+    .description p {
+        font-size: 18px;
+        margin-bottom: 18px;
+        text-align: justify;
+    }
+
+    .description ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 20px 0 30px;
+    }
+
+        .description ul li {
+            font-size: 18px;
+            padding: 8px 0 8px 30px;
+            position: relative;
+        }
+
+            .description ul li::before {
+                content: "🐾";
+                position: absolute;
+                left: 0;
+                color: var(--brun);
+            }
+
+/* ===== НАШИ КОТЫ ===== */
+.cats-section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+    .cats-section h1 {
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 50px;
+        color: var(--vert-fonce);
+    }
+
+.cat-card {
+    display: flex;
+    gap: 40px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    align-items: center;
+    scroll-margin-top: 100px;
+}
+
+    .cat-card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+.cat-photo {
+    flex: 0 0 320px;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--beige);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .cat-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.cat-info {
+    flex: 1;
+}
+
+    .cat-info h2 {
+        font-size: 26px;
+        color: var(--vert-fonce);
+        margin-bottom: 5px;
+    }
+
+    .cat-info .cat-subtitle {
+        font-style: italic;
+        color: var(--brun);
+        margin-bottom: 15px;
+        font-size: 17px;
+    }
+
+    .cat-info p {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    .cat-info .cat-details {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+        .cat-info .cat-details strong {
+            color: var(--vert-fonce);
+        }
+
+/* ===== НАВИГАЦИЯ ПО КОТАМ ===== */
+.cats-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+    .cats-nav a {
+        background: var(--vert-sauge);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 15px;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+        .cats-nav a:hover {
+            background: var(--brun);
+            transform: translateY(-2px);
+        }
+
+/* ===== КОТЯТА ===== */
+.kittens-section {
+    background: var(--creme);
+    padding: 70px 20px;
+}
+
+    .kittens-section .inner {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .kittens-section h1 {
+        text-align: center;
+        font-size: 34px;
+        margin-bottom: 30px;
+        color: var(--vert-fonce);
+    }
+
+    .kittens-section p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+.kittens-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+    .kittens-list li {
+        background: #fff;
+        padding: 18px 25px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 17px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+        .kittens-list li::before {
+            content: "🐱";
+            font-size: 22px;
+        }
+
+/* ===== КОНТАКТЫ ===== */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+    .contact h1 {
+        font-size: 34px;
+        margin-bottom: 30px;
+        color: var(--vert-fonce);
+    }
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+}
+
+    .contact-info a {
+        color: var(--vert-fonce);
+        transition: color 0.3s;
+    }
+
+        .contact-info a:hover {
+            color: var(--brun);
+        }
+
+/* ===== ПОДВАЛ ===== */
+footer {
+    background-color: var(--texte);
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 15px;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 900px) {
+    .cat-card,
+    .cat-card:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cat-photo {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .logo {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+        .hero h1 {
+            font-size: 34px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+    .description,
+    .kittens-section {
+        padding: 50px 15px;
+    }
+
+        .description h1,
+        .kittens-section h1,
+        .contact h1 {
+            font-size: 26px;
+        }
+
+        .description h2 {
+            font-size: 22px;
+        }
+
+        .description p,
+        .description ul li,
+        .kittens-section p {
+            font-size: 16px;
+            text-align: left;
+        }
+
+    .cats-section {
+        padding: 50px 15px;
+    }
+
+        .cats-section h1 {
+            font-size: 28px;
+        }
+
+    .cat-info h2 {
+        font-size: 22px;
+    }
+}
