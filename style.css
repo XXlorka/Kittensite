@@ -271,7 +271,7 @@ nav a {
 }
 
     .kittens-section .inner {
-        max-width: 850px;
+        max-width: 1100px;
         margin: 0 auto;
     }
 
@@ -282,62 +282,175 @@ nav a {
         color: var(--vert-fonce);
     }
 
-    .kittens-section p {
+    .kittens-section > .inner > p {
+        max-width: 850px;
+        margin: 0 auto 20px;
         font-size: 18px;
-        margin-bottom: 20px;
         text-align: justify;
     }
 
-.kittens-list {
-    list-style: none;
-    padding: 0;
-    margin: 30px 0;
+/* Галерея */
+.kittens-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 40px;
 }
 
-    .kittens-list li {
-        background: #fff;
-        padding: 18px 25px;
-        margin-bottom: 12px;
-        border-radius: 10px;
-        font-size: 17px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        display: flex;
-        align-items: center;
-        gap: 12px;
+.kitten-item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s;
+}
+
+    .kitten-item:hover {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
     }
 
-        .kittens-list li::before {
-            content: "🐱";
-            font-size: 22px;
-        }
+    .kitten-item h3 {
+        font-size: 24px;
+        color: var(--vert-fonce);
+        margin-bottom: 5px;
+        text-align: center;
+    }
 
-/* ===== КОНТАКТЫ ===== */
-.contact {
-    padding: 60px 20px;
+.kitten-sub {
+    font-size: 15px;
+    color: var(--brun);
+    font-style: italic;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-    .contact h1 {
+.kitten-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+    .kitten-photos img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+        .kitten-photos img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+/* На телефоне — 1 фото в ряд */
+@media (max-width: 768px) {
+    .kitten-photos {
+        grid-template-columns: 1fr;
+    }
+
+        .kitten-photos img {
+            height: 250px;
+        }
+
+    .kitten-item h3 {
+        font-size: 20px;
+    }
+}
+.kittens-section {
+    background: var(--creme);
+    padding: 70px 20px;
+}
+
+    .kittens-section .inner {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .kittens-section h1 {
+        text-align: center;
         font-size: 34px;
         margin-bottom: 30px;
         color: var(--vert-fonce);
     }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 18px;
-}
-
-    .contact-info a {
-        color: var(--vert-fonce);
-        transition: color 0.3s;
+    .kittens-section > .inner > p {
+        max-width: 850px;
+        margin: 0 auto 20px;
+        font-size: 18px;
+        text-align: justify;
     }
 
-        .contact-info a:hover {
-            color: var(--brun);
+/* Галерея */
+.kittens-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 40px;
+}
+
+.kitten-item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s;
+}
+
+    .kitten-item:hover {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .kitten-item h3 {
+        font-size: 24px;
+        color: var(--vert-fonce);
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+.kitten-sub {
+    font-size: 15px;
+    color: var(--brun);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.kitten-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+    .kitten-photos img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+        .kitten-photos img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
         }
+
+/* На телефоне — 1 фото в ряд */
+@media (max-width: 768px) {
+    .kitten-photos {
+        grid-template-columns: 1fr;
+    }
+
+        .kitten-photos img {
+            height: 250px;
+        }
+
+    .kitten-item h3 {
+        font-size: 20px;
+    }
+}
 
 /* ===== ПОДВАЛ ===== */
 footer {
